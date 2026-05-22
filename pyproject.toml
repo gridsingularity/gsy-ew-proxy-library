@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gsy-ew-proxy"
+version = "0.1.0"
+description = "GSY proxy library for interconnecting with Energy Web infrastructure, such as Energy Web Digital Spine"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+dependencies = [
+    "pendulum",
+    "httpx",
+    "websockets"
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["gsy_ew_proxy*"]
+exclude = ["tests*"]
